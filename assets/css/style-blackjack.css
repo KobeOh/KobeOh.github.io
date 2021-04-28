@@ -5,6 +5,9 @@ body {
     color: white;
 }
 
+.hidden {
+    display: none;
+}
 
 #dealer-row {
     position: absolute;
@@ -13,12 +16,138 @@ body {
     height:100%;
     width: 100%;
 
-    border: solid blue;
+    //border: solid blue;
     border-radius: 1px;
 }
 
 #text-row {
     position: absolute;
+
+    top: 30%;
+
+    height:100px;
+    width: 100%;
+
+    //border: solid red;
+    border-radius: 1px;
+}
+
+#text-row-message  {
+    position: absolute;
+    left:15%;
+
+    height:100%;
+    width: 35%;
+    //border: solid green;
+    border-radius: 1px;
+
+    font-family: Montserrat;
+    color:black;
+    text-align: center;
+    font-size: 48pt;
+    font-weight:normal;
+}
+
+
+#text-row-buttons  {
+    position: absolute;
+    left:50%;
+
+    height:100%;
+    width: 35%;
+    //border: solid green;
+    border-radius: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bet-button {
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+
+    border: none; 
+
+    font-family: Montserrat;
+    color:black;
+    text-align: center;
+    font-size: 30;
+    font-weight:normal;
+
+    border-radius: 3%;
+}
+
+.bet-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px  2px;
+}
+
+.bet-button.minus-five {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+    background-color: darksalmon;
+}
+
+.bet-button.minus-one {
+    background-color: darksalmon;
+}
+
+.bet-button.bet {
+    width: 160px;
+    background-color:gold   ;
+}
+
+.bet-button.plus-one {
+    background-color:darkseagreen;
+}
+
+.bet-button.plus-five {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+    background-color:darkseagreen;
+}
+
+.text-row-button {
+    height: 70px;
+    width: 150px;
+    margin: 5px;
+
+    border: none; 
+
+    font-family: Montserrat;
+    color:black;
+    text-align: center;
+    font-size: 30;
+    font-weight:normal;
+
+}
+
+.text-row-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 2px  2px;
+}
+
+.text-row-button.stand {
+    background-color:darksalmon;
+}
+
+.text-row-button.hit {
+    background-color:darkseagreen;
+}
+
+.text-row-button.play-again {
+    background-color:darkturquoise;
+    width: 250px;
+}
+
+.text-row-button.leave-room {
+    background-color:darkturquoise;
+    width: 350px;
+    text-decoration: none;
 }
 
 #deck {
@@ -32,7 +161,7 @@ body {
 .deck-card {
 height: 140px;
 width: 100px;
-background-color: white;
+background-color: honeydew;
 border: solid #131920;
 border-width: 3px;
 border-radius: 10%;
@@ -52,52 +181,22 @@ border-radius: 10%;
     left: 10px;
 }
 
-.player-card {
-    height: 140px;
-    width: 100px;
-    background-color: white;
-    border: solid #131920;
-    border-width: 3px;
-    border-radius: 10%;
-
-    position: absolute;
-    top: 5px;
-    left: 5px;
-}
-
-.player-card.num1{
-    position: absolute;
-    top:50%;
-    left: 5px;
-}
-
-.dealer-card {
+.dealer-card, .player-card {
     height: 140px;
     width: 100px;
     
-    /*
-    background-color: white;
-    border: solid #131920;
-    border-width: 3px;
-    border-radius: 10%;
-    */
     position: absolute;
     top: 5px;
     left: 5px;
 
     background-color: transparent;
     perspective: 1000px;
-}
-
-.dealer-card.num1{
-    position: absolute;
-    top:5px;
-    left: 150px;
 
     transition: transform 0.8s;
 }
 
-.dealer-card-inner {
+
+.dealer-card-inner, .player-card-inner{
     position: relative;
     width: 100%;
     height: 100%;
@@ -105,32 +204,32 @@ border-radius: 10%;
     transform-style: preserve-3d;
 }
 
-.dealer-card.num1:hover .dealer-card-inner {
-    transform: rotateY(180deg);
-}
-
-.dealer-card.num1:hover{
-    transform: translate(150px, 0);
-}
-
-.dealer-card-front, .dealer-card-back {
+.dealer-card-front, .dealer-card-back, .player-card-front, .player-card-back{
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
 }
 
-.dealer-card-front {
-    background-color: white;
+.dealer-card-front, .player-card-front{
+    background-color: honeydew;
     border: solid #131920;
     border-width: 3px;
     border-radius: 10%;
 }
 
-.dealer-card-back {
-    background-color: red;
+.dealer-card-back, .player-card-back {
+    background-color:white;
     border: solid #131920;
     border-width: 3px;
     border-radius: 10%;
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
+    
+    font-family: Montserrat;
+    color:black;
+    text-align: center;
+    font-size: 40;
+    font-weight:bold;
+
+    white-space: pre-line;
 }

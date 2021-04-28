@@ -6,18 +6,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<script type="text/javascript" src="assets/js/blackjack.js"></script>
     <div id="dealer-row">
         <div id="text-row">
-            
+            <div id="text-row-message">Balance: $20</div>
+            <div id="text-row-buttons">
+                <button class="bet-button minus-five ">
+                    -5
+                </button>
+                <button class="bet-button minus-one ">
+                    -1
+                </button>
+                <button class="bet-button bet ">
+                    Bet $1
+                </button>
+                <button class="bet-button plus-one ">
+                    +1
+                </button>
+                <button class="bet-button plus-five ">
+                    +5
+                </button>
+                <button class="text-row-button stand hidden">
+                    Stand
+                </button>   
+                <button class="text-row-button hit hidden">
+                    Hit
+                </button>
+                
+                <button class="text-row-button play-again hidden">
+                    Play Again
+                </button>
+                <a href="index.html" class="text-row-button leave-room hidden">
+                    Exit the Cardroom
+                </a>
+            </div>
         </div>
         <div id="deck">
-            <div class="player-card num1"></div>
-            <div class="player-card num2"></div>
-            <div class="player-card num3"></div>
-            <div class="player-card num4"></div>
-            <div class="player-card num5"></div>
-            <div class="player-card num6"></div>
+            <div class="player-card num1">
+                <div class="player-card-inner num1">
+                    <div class="player-card-front num1">
+                    </div>
+                    <div class="player-card-back num1">
+                    </div>
+                  </div>
+            </div>
+            <div class="player-card num2">
+                <div class="player-card-inner num2">
+                    <div class="player-card-front num2">
+                    </div>
+                    <div class="player-card-back num2">
+                    </div>
+                  </div>
+            </div>
+            <div class="player-card num3">
+                <div class="player-card-inner num3">
+                    <div class="player-card-front num3">
+                    </div>
+                    <div class="player-card-back num3">
+                    </div>
+                  </div>
+            </div>
+            <div class="player-card num3">
+                <div class="player-card-inner num3">
+                    <div class="player-card-front num3">
+                    </div>
+                    <div class="player-card-back num3">
+                    </div>
+                  </div>
+            </div>
+            <div class="player-card num4">
+                <div class="player-card-inner num4">
+                    <div class="player-card-front num4">
+                    </div>
+                    <div class="player-card-back num4">
+                    </div>
+                  </div>
+            </div>
+            <div class="player-card num5">
+                <div class="player-card-inner num5">
+                    <div class="player-card-front num5">
+                    </div>
+                    <div class="player-card-back num5">
+                    </div>
+                  </div>
+            </div>
+            <div class="player-card num6">
+                <div class="player-card-inner num6">
+                    <div class="player-card-front num6">
+                    </div>
+                    <div class="player-card-back num6">
+                    </div>
+                  </div>
+            </div>
 
             <div class="dealer-card num1">
                 <div class="dealer-card-inner num1">
@@ -27,11 +106,54 @@
                     </div>
                   </div>
             </div>
-            <div class="dealer-card num2"></div>
-            <div class="dealer-card num3"></div>
-            <div class="dealer-card num4"></div>
-            <div class="dealer-card num5"></div>
-            <div class="dealer-card num6"></div>
+            <div class="dealer-card num2">
+                <div class="dealer-card-inner num2">
+                    <div class="dealer-card-front num2">
+                    </div>
+                    <div class="dealer-card-back num2">
+                    </div>
+                  </div>
+            </div>
+            <div class="dealer-card num3">
+                <div class="dealer-card-inner num3">
+                    <div class="dealer-card-front num3">
+                    </div>
+                    <div class="dealer-card-back num3">
+                    </div>
+                  </div>
+            </div>
+            <div class="dealer-card num3">
+                <div class="dealer-card-inner num3">
+                    <div class="dealer-card-front num3">
+                    </div>
+                    <div class="dealer-card-back num3">
+                    </div>
+                  </div>
+            </div>
+            <div class="dealer-card num4">
+                <div class="dealer-card-inner num4">
+                    <div class="dealer-card-front num4">
+                    </div>
+                    <div class="dealer-card-back num4">
+                    </div>
+                  </div>
+            </div>
+            <div class="dealer-card num5">
+                <div class="dealer-card-inner num5">
+                    <div class="dealer-card-front num5">
+                    </div>
+                    <div class="dealer-card-back num5">
+                    </div>
+                  </div>
+            </div>
+            <div class="dealer-card num6">
+                <div class="dealer-card-inner num6">
+                    <div class="dealer-card-front num6">
+                    </div>
+                    <div class="dealer-card-back num6">
+                    </div>
+                  </div>
+            </div>
 
             <div class="deck-card num1"></div>
             <div class="deck-card num2"></div>
@@ -39,6 +161,6 @@
         </div>
 
     </div>
-    
+    <script type="text/javascript" src="assets/js/blackjack.js"></script>
 </body>
 </html>
