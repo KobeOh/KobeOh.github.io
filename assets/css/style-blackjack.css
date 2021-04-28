@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 64px;
+    background-color: #f7f5f2;
+    color: white;
+}
+
+
+#dealer-row {
+    position: absolute;
+    top: 15%;
+
+    height:100%;
+    width: 100%;
+
+    border: solid blue;
+    border-radius: 1px;
+}
+
+#text-row {
+    position: absolute;
+}
+
+#deck {
+    position: absolute;
+    left: 25%;
+
+    height:100%;
+    width: 110px;
+}
+
+.deck-card {
+height: 140px;
+width: 100px;
+background-color: white;
+border: solid #131920;
+border-width: 3px;
+border-radius: 10%;
+}
+
+.deck-card.num1{
+    position: absolute;
+}
+.deck-card.num2{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.deck-card.num3{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.player-card {
+    height: 140px;
+    width: 100px;
+    background-color: white;
+    border: solid #131920;
+    border-width: 3px;
+    border-radius: 10%;
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.player-card.num1{
+    position: absolute;
+    top:50%;
+    left: 5px;
+}
+
+.dealer-card {
+    height: 140px;
+    width: 100px;
+    
+    /*
+    background-color: white;
+    border: solid #131920;
+    border-width: 3px;
+    border-radius: 10%;
+    */
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.dealer-card.num1{
+    position: absolute;
+    top:5px;
+    left: 150px;
+
+    transition: transform 0.8s;
+}
+
+.dealer-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.dealer-card.num1:hover .dealer-card-inner {
+    transform: rotateY(180deg);
+}
+
+.dealer-card.num1:hover{
+    transform: translate(150px, 0);
+}
+
+.dealer-card-front, .dealer-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.dealer-card-front {
+    background-color: white;
+    border: solid #131920;
+    border-width: 3px;
+    border-radius: 10%;
+}
+
+.dealer-card-back {
+    background-color: red;
+    border: solid #131920;
+    border-width: 3px;
+    border-radius: 10%;
+    transform: rotateY(180deg); 
+}
